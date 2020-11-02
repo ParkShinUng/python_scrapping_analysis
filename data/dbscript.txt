@@ -1,0 +1,13 @@
+#MySQL Database 생성
+mysql -u root –p					# root 계정 접속
+show databases;					# DB 보기
+use mysql;					# mysql DB 사용
+create user python@localhost identified by 'python';	# python 계정 생성
+grant all on *.* to python@localhost;			# 모든 권한 넘겨주기
+flush privileges;					# 변경 사항 반영
+exit;						# 접속 해제
+
+mysql -u python -p	# python 계정 접속
+create database python_db;	# python_db 이름의 DB  생성
+show databases;		# DB 보기
+use python_db;		# DB 사용

@@ -1,0 +1,161 @@
+백명숙(ms.baek@hucloud.co.kr)
+
+blog.naver.com/vega2k
+
+source 작성하실 디렉토리 생성
+c\python_ds
+
+Python기반 수집과 분석에 활용될 라이브러리들
+설치
+> pip install selenium
+제거
+> pip uninstall selenium
+설치여부 확인
+> pip show selenium
+설치된 모든 라이브러리 확인
+> pip list
+
+수집과 분석 
+수집을 할때 알아야 할 기본적인 사항들
+웹의 개념들, html, css selector, ajax 기본적인 개념 학습 할때는 html, jsp 부분적으로 사용
+정규표현식(regular expression) 
+
+수집 1 ~ 6번 
+분석 7
+ 1.  Text 데이터 가져오기
+    naver 번역 API 사용, 활용
+    검색 API 사용
+    naver 뉴스 제목 추출
+
+ 2. Binary 데이터 가져오기 
+   naver 웹툰 이미지 다운로드, 업로드
+
+ 3. 기상청 날씨 데이터 가져와서 자료구조 저장
+    - Table(표) 데이터 형태로 저장
+    - Pandas 사용
+
+ 4. Melon 100 Chart 데이터 가져오기
+   Table(표) 데이터 형태로 생성해서 RDB에 저장  
+    - 정규표현식
+    - DB에 저장할 때 pymysql, sqlalchemy 둘 다 사용
+
+ 4-1  행정구역 정보를 가져와서 데이터 분석 및 시각화
+    - pandas, seaborn, matplotlib 사용
+      
+ 5. 국회의원 현황 데이터를 가져와서 
+   Table(표) 데이터 형태로 생성해서 RDB에 저장하고 시각화
+   https://www.assembly.go.kr/assm/memact/congressman/memCond/memCondListAjax.do?currentePage=1&rowPerPage=50
+   currentPage: 7
+   rowPerPage: 6
+ 
+ 6. 팟빵 
+
+ 7. 네이버
+ 8. 씨네21 영화배우 정보
+  Table(표) 데이터 형태로 생성해서 MongoDB에 저장하고 분석
+  MongoDB 개념 , 조회/등록/수정
+
+ 9. 공공데이터 포털에 있는 정보를 가져와서 분석 
+  행정구역 정보, 서울시 코로나  정보 분석 하고 시각화
+      
+
+1. requests
+: Http 통신
+https://requests.readthedocs.io/en/master/
+2. beautifulsoup
+: html text parsing
+<a href="">제목</a>
+3. Selenium
+: http통신, parsing, 
+ webdriver
+4. Pandas
+: 2차원 Table형태의 데이터를 생성하고, 분석
+5. Matplotlib, Seaborn
+: 데이터 시각화
+6. Pymysql
+: mysql(maria) db와 연동
+7. SqlAlchemy
+: ORM(Object Relational Mapping) 
+  객체와 Table을 매핑해주는 역할
+8. Pymongo
+: mongo db와 연동
+
+개발환경 설정
+1. Maria DB
+ : root password - mysql
+ : utf-8 check
+2. MongoDB
+3. robo3t 
+4. DataGrip, Pycharm
+jetbrains.com
+
+연습문제
+14일(수)
+38 yesterday
+56 나이계산해서 출력
+63 guess game
+
+15일(목)
+86 리스트와 딕셔너리
+122 List Comprehension
+
+from datetime
+datetime.py <- 모듈
+
+from datetime import datetime
+datetime.py <- 모듈
+datetime 이라는 클래스 
+
+Http 프로토콜
+Get , Post 방식이란?
+: 클라이언트에서 서버에게 데이터를 보내는 방식
+1) Get 방식
+ : 서버에게 보내는 데이터를 URL에 append 시켜서 보내는 방식 (size제한이 있음)
+ : 서버상의 데이터를 조회할 때 사용함
+ : url?key1=value1&key2=value2&key3=value3
+https://search.naver.com/search.naver?sm=top_hty&fbm=1&ie=utf8&query=%ED%8C%8C%EC%9D%B4%EC%8D%AC
+2) Post 방식
+ : 서버에 보내는 데이터를 request 스트림의 Body에 append 시켜서 보내는 방식(size에 제한이 없음)
+ : 서버상의 데이터를 변경할 때 사용하거나, 파일업로드와 같은 요청일때 
+ : 중요한 데이터(주민번호,카드번호)를 서버로 보낼때 사용하는 방식
+
+html page작성
+JSP (java 서버 )
+Eclipse Enterpise vesion
+Tomcat 
+
+JavaSE
+  : 
+JavaEE
+  : Dynamic Web Application 작성 
+  : Servlet과 JSP 기술을 사용
+  : Server(Tomcat) 상에 동작을 함
+  
+  Dynamic Web Application 와 Static Web Application 의 차이점?
+
+clientid
+ mJAaMfhD3hNaYk6MgyV2
+
+clientsecret
+Gt4J1hqbYU
+
+
+XML
+<name>홍길동</name>
+
+Json
+{
+  "name":"홍길동",
+  "phone":["010-1234","010-4567"]
+}
+
+"items": [
+{
+"title": "<b>자바</b>학원 쉽고 빠르게 이해했어요!",
+"link": "https:\/\/blog.naver.com\/lhw808?Redirect=Log&logNo=222114216780",
+"description": "기회에 <b>자바</b>학원을 알아보게 되었습니다. 계속 미루다가는 새로운 것을 배울 수 없다고 생각해서... 그래서 <b>자바</b> 학원을 알아보면서 어디로 가야 할지 고민을 한참 했던 것 같아요. 그러다 가게 된 곳은 IT 기본... ",
+"bloggername": "하얀펭귄",
+"bloggerlink": "https://blog.naver.com/lhw808",
+"postdate": "20201013"
+}, {}, {} 
+]
